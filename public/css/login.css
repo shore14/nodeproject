@@ -1,0 +1,12 @@
+.container {
+    border: 2px solid black;
+    margin: auto;
+    background-color: darkslategrey;
+  
+}
+
+.loginf {
+    border: 2px solid black;
+    margin: auto;
+    background-color: azure;
+}
