@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/shore14/nodeproject/issues"
   },
-  "homepage": "https://github.com/shore14/nodeproject#readme",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4"
