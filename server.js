@@ -24,14 +24,14 @@ function handleLogin(request, response) {
 
    checkDBuser(fname, function(errr, result){
 
-     response.json(person);
+     response.json(people);
    });
 }
 
 function checkDBuser(params, callback) {
  const sql = "SELECT id, fname, lname FROM people where fname = $1::string";
  const data = [params];
- pool.query(sql, params, function(err, result) {
+ pool.query(sql, data, function(err, result) {
     // If an error occurred...
     if (err) {
         console.log("Error in query: ")
