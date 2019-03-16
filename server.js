@@ -29,7 +29,7 @@ function handleLogin(request, response) {
 }
 
 function checkDBuser(params, callback) {
- const sql = "SELECT id, fname, lname FROM people where fname = $1::string";
+ const sql = "SELECT id, fname, lname FROM people where fname = $1::String";
  const data = [params];
  pool.query(sql, data, function(err, result) {
     // If an error occurred...
