@@ -25,7 +25,7 @@ function handleLogin(request, response) {
    checkDBuser(fname, function(errr, result){
      
      const context = result[0];
-     response.json("logeIN",context);
+     response.json("logedIN",context);
   //   response.render("logedIN",context);
    });
 }
