@@ -13,7 +13,7 @@ app.listen(port, function() {
     console.log(`Listening on port: ${port}`);
 });
 
-app.get("loginUser",handleLogin);
+app.get("/loginUser",handleLogin);
 
 
 function handleLogin(request, response) {
@@ -22,13 +22,34 @@ function handleLogin(request, response) {
    const key = request.query.key;
    var params = '{"fname": fname, "lname": lname, "key":key}';
 
-   checkDBuser(params, function(errr, result){
+   checkDBuser(fname, function(errr, result){
 
+     response.json(person);
    });
 }
 
 function checkDBuser(params, callback) {
- const sql = "SELECT id, fname, lname FROM people where id = $1::int";
- const reqObj = JSON.parse(params);
- console.log(reqObj);
+ const sql = "SELECT id, fname, lname FROM people where fname = $1::string";
+ const data = [params];
+ pool.query(sql, params, function(err, result) {
+    // If an error occurred...
+    if (err) {
+        console.log("Error in query: ")
+        console.log(err);
+        callback(err, null);
+    }
+
+    // Log this to the console for debugging purposes.
+    console.log("Found result: " + JSON.stringify(result.rows));
+
+
+    // When someone else called this function, they supplied the function
+    // they wanted called when we were all done. Call that function now
+    // and pass it the results.
+
+    // (The first parameter is the error variable, so we will pass null.)
+    callback(null, result.rows);
+});
+
+ console.log(params);
 }
