@@ -21,15 +21,16 @@ function handleLogin(request, response) {
    const lname = request.query.lname;
    const key = request.query.key;
    var params = '{"fname": fname, "lname": lname, "key":key}';
-
+   var context = {};
    checkDBuser(fname, function(errr, result){
-
-     response.json(people);
+     
+     context.results = JSON.stringify(rows);
+     response.render("logedIN",context);
    });
 }
 
 function checkDBuser(params, callback) {
- const sql = "SELECT id, fname, lname FROM people where fname = $1::String";
+ const sql = "SELECT id, fname, lname FROM people where fname = $1";
  const data = [params];
  pool.query(sql, data, function(err, result) {
     // If an error occurred...
