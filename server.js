@@ -21,11 +21,12 @@ function handleLogin(request, response) {
    const lname = request.query.lname;
    const key = request.query.key;
    var params = '{"fname": fname, "lname": lname, "key":key}';
-   var context = {};
+
    checkDBuser(fname, function(errr, result){
      
-     context.results = JSON.stringify(rows);
-     response.render("logedIN",context);
+     const context = result[0];
+     response.json(context);
+  //   response.render("logedIN",context);
    });
 }
 
