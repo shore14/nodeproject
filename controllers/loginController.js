@@ -29,10 +29,10 @@ function handleSingup(req, res){
     lgmodel.handleSingup(data, function(err, result){
         // response.writeHead(302, {'Location' : '../login.html'});
         // response.end();
-        console.log(results[0] + "id returned");
-        if(results[0]) {
+        // console.log(results[0] + "id returned");
+        // if(results[0]) {
           res.redirect("../login.html");
-        }
+        // }
     })
 }
 
