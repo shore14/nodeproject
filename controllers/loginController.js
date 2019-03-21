@@ -39,5 +39,5 @@ function handleSignup(req, res){
 
 module.exports = {
     handleLogin: handleLogin
-    ,handleSingup: handleSingup
+    ,handleSignup: handleSignup
 }
