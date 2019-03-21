@@ -16,6 +16,7 @@ app.listen(port, function() {
 
 // app.get("/loginUser",handleLogin);
 app.get("/loginUser",lgcontroller.handleLogin);
+app.get("/signUp", lgcontroller.handleSignup);
 
 
 // function handleLogin(request, response) {
