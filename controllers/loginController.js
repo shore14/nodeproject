@@ -22,9 +22,9 @@ function handleLogin(request, response) {
 }
 
 function handleSignup(req, res){
-    const fname = req.query.fname;
-    const lname = req.query.lname;
-    const key = req.query.key;
+    const fname = req.body.fname;
+    const lname = req.body.lname;
+    const key   = req.body.key;
     const data = [fname,lname,key];
     lgmodel.signUp(data, function(err, result){
         res.writeHead(302, {'Location' : '../login.html'});
