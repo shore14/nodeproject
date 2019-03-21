@@ -26,7 +26,7 @@ function handleLogin(request, response) {
 }
 
 function handleSignup(req, res){
-    const fname = req.body.fname;
+    const fname = req.body.fame;
     const lname = req.body.lname;
     const key   = req.body.key;
     const data = [fname,lname,key];
