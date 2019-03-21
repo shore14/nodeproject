@@ -30,7 +30,7 @@ function checkDBuser(params, callback) {
 })
 };
 
-function signUp(params) {
+function signUp(params,callback) {
     //try returning id
     const sql = "INSERT INTO people (fname, lname, key) Values ($1, $2, $3)";
     pool.query(sql, params, function(err, result) {
