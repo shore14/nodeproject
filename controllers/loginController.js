@@ -12,11 +12,15 @@ function handleLogin(request, response) {
 
       const context = result[0];
     //  response.json(context);
-    // if(context){
+     if(context){
       response.render("logedIN", context);
-    // }
-    // else
-
+    }
+    else{
+      
+        res.writeHead(302, {'Location' : '../login.html'});
+        res.end();
+    }
+         
    });
 
 }
