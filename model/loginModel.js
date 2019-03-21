@@ -4,6 +4,8 @@ const connectionString = process.env.DATABASE_URL;
 
 
 const pool = new Pool({connectionString: connectionString});
+
+
 function checkDBuser(params, callback) {
  const sql = "SELECT id, fname, lname FROM people where fname = $1 and lname = $2 and key = $3";
  const data = [params];
