@@ -27,8 +27,8 @@ function handleSingup(req, res){
     const key = req.query.key;
     const data = [fname,lname,key];
     lgmodel.handleSingup(data, function(err, result){
-        response.writeHead(302, {'Location' : '../login.html'});
-        response.end();
+        res.writeHead(302, {'Location' : '../login.html'});
+        res.end();
         // console.log(results[0] + "id returned");
         // if(results[0]) {
         //   res.render("login.html");
