@@ -11,7 +11,8 @@ function handleLogin(request, response) {
    lgmodel.checkDBuser(data, function(err, result){
 
       const context = result[0];
-     response.json(context);
+    //  response.json(context);
+      response.render("logedIN", context);
    });
 //    checkDBuser(fname, function(errr, result){
      
