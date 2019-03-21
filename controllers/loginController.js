@@ -33,7 +33,7 @@ function handleSingup(req, res){
         // if(results[0]) {
           res.redirect("../login.html");
         // }
-    })
+    });
 }
 
 module.exports = {
