@@ -26,15 +26,14 @@ function handleSignup(req, res){
     const lname = req.query.lname;
     const key = req.query.key;
     const data = [fname,lname,key];
-    lgmodel.signUp(data);
-        // , function(err, result){
+    lgmodel.signUp(data, function(err, result){
         res.writeHead(302, {'Location' : '../login.html'});
         res.end();
         // console.log(results[0] + "id returned");
         // if(results[0]) {
         //   res.render("login.html");
         // }
-    // });
+    });
 }
 
 module.exports = {
