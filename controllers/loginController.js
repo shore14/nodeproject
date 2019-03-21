@@ -1,6 +1,7 @@
 const lgmodel = require("../model/loginModel.js");
 
 
+
 function handleLogin(request, response) {
    const fname = request.query.fname;
    const lname = request.query.lname;
@@ -30,6 +31,7 @@ function handleSignup(req, res){
     const lname = req.body.lname;
     const key   = req.body.key;
     const data = [fname,lname,key];
+    console.log("the thing broken" + fname);
     lgmodel.signUp(data, function(err, result){
         res.writeHead(302, {'Location' : '../login.html'});
         res.end();
