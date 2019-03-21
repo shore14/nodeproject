@@ -31,7 +31,7 @@ function handleSingup(req, res){
         // response.end();
         // console.log(results[0] + "id returned");
         // if(results[0]) {
-          result.redirect("login.html");
+          res.redirect("login.html");
         // }
     });
 }
