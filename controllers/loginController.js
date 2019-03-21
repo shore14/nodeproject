@@ -9,7 +9,7 @@ function handleLogin(request, response) {
 
    lgmodel.checkDBuser(fname, function(err, result){
 
-      const context = reult[0];
+      const context = result[0];
      response.json(context);
    });
 //    checkDBuser(fname, function(errr, result){
