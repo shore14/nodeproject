@@ -12,15 +12,28 @@ function handleLogin(request, response) {
 
       const context = result[0];
     //  response.json(context);
+    // if(context){
       response.render("logedIN", context);
+    // }
+    // else
+
    });
-//    checkDBuser(fname, function(errr, result){
-     
-//      const context = result[0];
-   //  response.render("logedIN",JSON.parse(context));
-  //   response.render("logedIN",context);
-//      response.json(context);
-//    });
+
+}
+
+function handleSingup(req, res){
+    const fname = request.query.fname;
+    const lname = request.query.lname;
+    const key = request.query.key;
+    const data = [fname,lname,key];
+    lgmodel.handleSingup(data, function(err, result){
+        // response.writeHead(302, {'Location' : '../login.html'});
+        // response.end();
+        console.log(results[0] + "id returned");
+        if(results[0]) {
+          response.redirect("../login.html");
+        }
+    })
 }
 
 module.exports = {
