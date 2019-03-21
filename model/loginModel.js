@@ -51,5 +51,6 @@ function signUp(params, callback) {
 };
 
 module.exports = {
-    checkDBuser: checkDBuser
+    checkDBuser: checkDBuser,
+    signUp: signUp
 }

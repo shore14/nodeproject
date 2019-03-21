@@ -38,4 +38,5 @@ function handleSingup(req, res){
 
 module.exports = {
     handleLogin: handleLogin
+    ,handleSingup: handleSingup
 }
