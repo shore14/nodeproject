@@ -6,7 +6,7 @@ function handleLogin(request, response) {
    const lname = request.query.lname;
    const key = request.query.key;
    var params = '{"fname": fname, "lname": lname, "key":key}';
-   const data = [fname,lname];
+   const data = [fname,lname,key];
 
    lgmodel.checkDBuser(data, function(err, result){
 
