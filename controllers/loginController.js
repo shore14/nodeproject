@@ -26,7 +26,7 @@ function handleSingup(req, res){
     const lname = req.query.lname;
     const key = req.query.key;
     const data = [fname,lname,key];
-    lgmodel.handleSingup(data);
+    lgmodel.signUp(data);
         // , function(err, result){
         res.writeHead(302, {'Location' : '../login.html'});
         res.end();
