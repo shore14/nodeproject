@@ -17,8 +17,8 @@ function handleLogin(request, response) {
     }
     else{
       
-        res.writeHead(302, {'Location' : '../login.html'});
-        res.end();
+        response.writeHead(302, {'Location' : '../login.html'});
+        response.end();
     }
          
    });
