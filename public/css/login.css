@@ -1,17 +1,33 @@
 .container {
     border: 2px solid black;
+    border-radius: 30px;
     margin: auto;
-    background-color: darkslategrey;
+    background-color:gray;
     width: 700px;
   
 }
 
 .loginf {
     border: 2px solid black;
+    border-radius: 30px;
     margin: auto;
     background-color: azure;
     width: 600px;
+    text-align: center;
 }
 input {
     align: center;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+.sub {
+    background-color: orange;
+    font-size: 16px;
+    padding: 15px 32px;
+
+}
+h1{
+    text-align: center;
+   
 }
