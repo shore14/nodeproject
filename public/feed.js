@@ -13,7 +13,7 @@ function getStarted(){
             bagde.innerHTML =
                 '<h2>' + title + '</h2></br>'
                 +'<div>' + body + '</div>';
-            document.getElementById('start').appendChild(badge).innerHTML;
+            document.getElementById('start').innerHTML = badge.innerHTML;
          }
      }
    })
