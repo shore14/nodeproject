@@ -7,4 +7,4 @@ function getStarted(){
           console.log(key + ": " + obj[key]);
       }
    });
-}
+};
