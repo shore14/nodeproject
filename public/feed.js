@@ -1,12 +1,12 @@
 function getStarted(){
     const row = $();
    $.get("/startFeed", function(results) {
-      for (const key in results)
-      {
-          console.log("in the loop");
-          console.log(key + ": " + obj[key]);
-      }
+    //   for (const key in results)
+    //   {
+    //       console.log("in the loop");
+    //       console.log(key + ": " + obj[key]);
+    //   }
     
    });
-   console.log(results);
-};
+   console.log("js" + JSON.stringify(results));
+}
