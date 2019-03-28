@@ -14,7 +14,7 @@ function handleLogin(request, response) {
       const context = result[0];
     //  response.json(context);
      if(context){
-      response.redirect("../feed.html");
+      response.redirect("feed.html");
     //   response.render("logedIN", context);
     }
     else{
