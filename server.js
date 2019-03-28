@@ -8,6 +8,7 @@ const connectionString = process.env.DATABASE_URL;
 const pool = new Pool({connectionString: connectionString});
 //for handles
 const lgcontroller = require("./controllers/loginController.js");
+const fcontroller = require("./controllers/feedController.js")
 
 //set up post parser
 const bodyParser = require('body-parser')
@@ -31,3 +32,4 @@ app.listen(port, function() {
 //set up handles
 app.get("/loginUser",lgcontroller.handleLogin);
 app.post("/signUp", lgcontroller.handleSignup);
+app.get("/startFeed", fcontroller.handleStartFeed);
