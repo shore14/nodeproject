@@ -16,6 +16,7 @@ function getTopTen(callback){
             console.log("Error in query: ");
             callback(error, null);
         }
+        console.log("model " + result.rows);
         callback(null, result.rows);
     })
 };
