@@ -18,7 +18,7 @@ function getTopTen(callback){
         }
         callback(null, result.rows);
     })
-}
+};
 
 module.exports = {
     getTopTen: getTopTen
