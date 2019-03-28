@@ -1,4 +1,4 @@
-function pageStarted(){
+function getStarted(){
     const row = $();
    $.get("/startFeed", function(results) {
       for (const key in results)
