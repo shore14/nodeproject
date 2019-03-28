@@ -4,7 +4,7 @@ function getStarted(){
    $.get("/startFeed", function(results) {
      rows = JSON.stringify(results);
      for (const row in rows){
-         for(const i = 0; i < rows[row].length; i++){
+         for(const i = 1; i < rows[row].length; i++){
             const title = rows[i].title;
             const body = rows[i].body;
             const type_def = rows[i].type_def;
