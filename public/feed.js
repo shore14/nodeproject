@@ -6,5 +6,6 @@ function getStarted(){
           console.log("in the loop");
           console.log(key + ": " + obj[key]);
       }
+      console.log(results);
    });
 };
