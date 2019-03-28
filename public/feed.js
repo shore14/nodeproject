@@ -2,13 +2,20 @@ function getStarted(){
     const el = $();
     $(document).ready(function() {
    $.get("/startFeed", function(results) {
-     rows = JSON.stringify(results);
-     for (row in results){
-         el = el.add(<div>+row[title] + row[body] + row[type_def]+</div>);
+     rows = JSON.parse(results);
+     for (const row in rows){
+         for(const i = 0; i < rows[row].length; i++){
+            const title = rows[i].title;
+            const body = rows[i].body;
+            const type_def = rows[i].type_def;
+            const bagde = document.createElement('div');
+            bagde.className = 'feedbox';
+            bagde.innerHTML =
+                '<h2>' + title + '</h2></br>'
+                +'<div>' + body + '</div>';
+            document.getElementById('start').appendChild(badge);
+         }
      }
-     $("start").append(el);
-    console.log("js" + JSON.stringify(results));
-    // document.getElementById("start").innerHTML = JSON.stringify(results);
    })
 });
 }
