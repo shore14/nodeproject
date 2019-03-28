@@ -8,6 +8,7 @@ function getStarted(){
     //       console.log(key + ": " + obj[key]);
     //   }
     console.log("js" + JSON.stringify(results));
+    document.getElementById("start").innerHTML = JSON.stringify(results);
    })
 });
 }
