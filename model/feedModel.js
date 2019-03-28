@@ -13,11 +13,11 @@ function getTopTen(callback){
     const sql = "SELECT c.title, c.body, t.context FROM cards c JOIN types t ON c.type_id = t.id ORDER BY c.id DESC LIMIT 10";
     pool.query(sql, function(error, result){
         if (error) {
-            console.log("Error in query: ")
+            console.log("Error in query: ");
             callback(error, null);
         }
         callback(null, result.rows);
-    });
+    })
 }
 
 module.exports = {
