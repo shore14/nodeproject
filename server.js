@@ -23,7 +23,7 @@ app.use(express.urlencoded());
 //set up directories
 app.set("views", "views");
 app.set("view engine", "ejs");
-app.use(express.static(path.join(_dirname,"public")));
+app.use(express.static"public"));
 //set up port connection
 app.listen(port, function() {
     console.log(`Listening on port: ${port}`);
