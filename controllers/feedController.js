@@ -5,9 +5,10 @@ function handleStartFeed(req, res){
     fmodel.getTopTen(function(err, results){
         // const context = results;
         console.log("Controller " + results);
-        res.send(results);
+        
      
     })
+    res.send(results);
 }
 
 module.exports = {
