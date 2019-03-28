@@ -32,7 +32,7 @@ function checkDBuser(params, callback) {
 
 function signUp(params,callback) {
     //try returning id
-    const sql = "INSERT INTO people (fname, lname, key) Values ($1, $2, $3)";
+    const sql = "INSERT INTO people (fname, lname, key) Values ($1, $2, $3) RETURNING id";
     pool.query(sql, params, function(err, result) {
         // If an error occurred...
         if (err) {
@@ -49,7 +49,7 @@ function signUp(params,callback) {
         // and pass it the results.
     
         // (The first parameter is the error variable, so we will pass null.)
-        callback(null, null);
+        callback(null, result.rows);
     })
 };
 
