@@ -10,7 +10,7 @@ function getStarted(){
     $.each(results, function(i, field){
         // $("start").append(field + " ");
         JSON.stringify(field);
-        $(document.getElementById('start')).append("<div class='card'>" + field.title + " </br>" + field.body + "</br></br>");
+        $(document.getElementById('start')).append("<div class='card'>" + field.title.toUpperCase() + " </br>" + field.body + "</br></br>");
     });
   });
 });
