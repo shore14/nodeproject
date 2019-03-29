@@ -6,3 +6,8 @@
     background-color: whitesmoke;
     text-align: center;
 }
+
+.feedin {
+    overflow-y: scroll;
+    height: 850px;
+}
