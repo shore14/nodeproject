@@ -8,12 +8,12 @@ function getStarted(){
             const title = rows[i].title;
             const body = rows[i].body;
             const type_def = rows[i].type_def;
-            const bagde = document.createElement('div');
-            bagde.className = 'feedbox';
-            bagde.innerHTML =
-                '<h2>' + title + '</h2></br>'
+            // const bagde = document.createElement('div');
+            // bagde.className = 'feedbox';
+            // bagde.innerHTML =
+            const badge =  '<h2>' + title + '</h2></br>'
                 +'<div>' + body + '</div>';
-            document.getElementById('start').innerHTML.appendChild(bagde);
+            document.getElementById('start').innerHTML = badge;
          }
      }
    })
