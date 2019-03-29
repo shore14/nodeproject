@@ -8,7 +8,7 @@ function getStarted(){
     var badge = "";
     console.log(results);
      for (const row in results){
-            var title = row.title;
+            var title = JSON.stringify(row.title);
             var body = row.body;
             var type_def = row.type_def;
             badge +=  '<h2>' + title + '</h2></br>'
