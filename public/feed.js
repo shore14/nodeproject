@@ -9,7 +9,8 @@ function getStarted(){
     console.log(results);
     $.each(results, function(i, field){
         // $("start").append(field + " ");
-        $(document.getElementById('start')).append(field + " ");
+        JSON.stringify(field);
+        $(document.getElementById('start')).append(JSON.stringify(field) + " ");
     });
     //  for (const row in results){
     //         var title = JSON.stringify(row.title);
