@@ -10,7 +10,7 @@
     background-color: whitesmoke;
     text-align: center;
     padding: 3px;
-    box-sizing: border-box;
+    width: 400px;
 }
 
 .feedin {
