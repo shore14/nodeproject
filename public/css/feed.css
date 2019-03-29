@@ -25,3 +25,12 @@ h1 {
     text-align: center;
 
 }
+
+.left {
+    float: left;
+    width: 200px;
+}
+.right {
+    float: left;
+    width: 200px;
+}
