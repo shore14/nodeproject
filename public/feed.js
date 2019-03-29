@@ -10,16 +10,8 @@ function getStarted(){
     $.each(results, function(i, field){
         // $("start").append(field + " ");
         JSON.stringify(field);
-        $(document.getElementById('start')).append(field.title + " ");
+        $(document.getElementById('start')).append("<div>" + field.title + " </br>" + field.body + "</br></br>");
     });
-    //  for (const row in results){
-    //         var title = JSON.stringify(row.title);
-    //         var body = row.body;
-    //         var type_def = row.type_def;
-    //         badge +=  '<h2>' + title + '</h2></br>'
-    //             +'<div>' + body + '</div>';
-    //      }
-    //     document.getElementById('start').innerHTML = badge;
-   });
+  });
 });
 }
