@@ -1,5 +1,5 @@
 .feedbox {
-    background-color: blue;
+    background-color: wheat;
 }
 
 .card {
@@ -19,4 +19,9 @@
     width: 450px;
     background-color: floralwhite;
     margin: auto;
+}
+
+h1 {
+    text-align: center;
+
 }
