@@ -10,7 +10,7 @@ function getStarted(){
     $.each(results, function(i, field){
         // $("start").append(field + " ");
         JSON.stringify(field);
-        $(document.getElementById('start')).append(JSON.stringify(field.title) + " ");
+        $(document.getElementById('start')).append(field.title + " ");
     });
     //  for (const row in results){
     //         var title = JSON.stringify(row.title);
