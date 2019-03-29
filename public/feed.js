@@ -1,10 +1,10 @@
 function getStarted(){
     const el = $();
-    $(document).ready(function() {
-   $.get("/startFeed", function(results) {
-     rows = JSON.stringify(results);
-     rows = JSON.parse(results);
-     for (const row in rows){
+ $(document).ready(function() {
+   $.getJSON("/startFeed", function(results) {
+    //  rows = JSON.stringify(results);
+    //  rows = JSON.parse(results);
+     for (const row in results){
             const title = row.title;
             const body = row.body;
             const type_def = rows.type_def;
