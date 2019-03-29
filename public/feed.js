@@ -2,6 +2,7 @@ function getStarted(){
     const el = $();
     $(document).ready(function() {
    $.get("/startFeed", function(results) {
+     rows = JSON.stringify(results);
      rows = JSON.parse(results);
      for (const row in rows){
             const title = row.title;
