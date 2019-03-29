@@ -3,6 +3,10 @@
 }
 
 .card {
+    display: inline;
+    margin: auto;
+    border: 2px solid darkblue;
+    border-radius: 2px;
     background-color: whitesmoke;
     text-align: center;
 }
