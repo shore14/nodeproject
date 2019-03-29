@@ -1,5 +1,5 @@
 .feedbox {
-    background-color: wheat;
+    background-color: darkgray;
 }
 
 .card {
@@ -22,6 +22,7 @@
 }
 
 h1 {
+    margin:auto;
     text-align: center;
 
 }
