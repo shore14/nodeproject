@@ -4,17 +4,20 @@ function getStarted(){
    $.getJSON("/startFeed", function(results) {
     //  rows = JSON.stringify(results);
     //  rows = JSON.parse(results);
+    var items = [];
+    var badge = "";
+    console.log(results);
      for (const row in results){
-            const title = row.title;
-            const body = row.body;
-            const type_def = rows.type_def;
+            var title = row.title;
+            var body = row.body;
+            var type_def = rows.type_def;
             // const bagde = document.createElement('div');
             // bagde.className = 'feedbox';
             // bagde.innerHTML =
-            const badge =  '<h2>' + title + '</h2></br>'
+            badge +=  '<h2>' + title + '</h2></br>'
                 +'<div>' + body + '</div>';
-            document.getElementById('start').innerHTML = badge;
          }
+        document.getElementById('start').innerHTML = badge;
    })
 });
 }
