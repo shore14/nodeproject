@@ -6,7 +6,7 @@
    
     margin: auto;
     border: 2px solid darkblue;
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: whitesmoke;
     text-align: center;
     padding: 3px;
@@ -17,4 +17,5 @@
     overflow-y: scroll;
     height: 600px;
     width: 70%;
+    margin: auto;
 }
