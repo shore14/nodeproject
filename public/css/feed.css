@@ -1,5 +1,7 @@
 .feedbox {
     background-color: darkgray;
+    display: flexbox;
+    justify-content: space-around;
 }
 
 .card {
