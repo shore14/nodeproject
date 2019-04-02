@@ -33,3 +33,4 @@ app.listen(port, function() {
 app.get("/loginUser",lgcontroller.handleLogin);
 app.post("/signUp", lgcontroller.handleSignup);
 app.get("/startFeed", fcontroller.handleStartFeed);
+app.post("/addCard", fcontroller.handleAdd);

@@ -17,7 +17,7 @@ function addCard(){
     var title = $("#title").val();
     var body = $("#body").val();
     var value = $("form input[type='radio']:checked").val();
-
+   
     $(document.getElementById('start')).append("<div class='card'>" + title.toUpperCase() + " </br>" + body + "</div></br></br>");
   // });
 }

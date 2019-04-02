@@ -12,7 +12,10 @@ function handleStartFeed(req, res){
     });
     
 }
+ function handleAdd(req,res){
 
+ }
 module.exports = {
     handleStartFeed: handleStartFeed
+    handleAdd: handleAdd
 }
