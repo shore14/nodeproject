@@ -15,3 +15,13 @@ function getStarted(){
   });
 });
 }
+
+function addCard(){
+  $(document).ready(function() {
+    var title = $("#title").val();
+    
+alert("Value of title is : " + title);
+    var value = $("form input[type='radio']:checked").val();
+alert("Value of Changed Radio is : " +value);
+  });
+}
