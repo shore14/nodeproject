@@ -19,6 +19,7 @@
     overflow-y: scroll;
     height: 600px;
     width: 450px;
+    border-radius: 10px;
     background-color: floralwhite;
     margin: auto;
 }
