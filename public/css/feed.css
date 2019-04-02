@@ -1,6 +1,6 @@
 .feedbox {
     background-color: darkgray;
-    display: flexbox; 
+    display: flex; 
     justify-content: space-around;
 }
 
