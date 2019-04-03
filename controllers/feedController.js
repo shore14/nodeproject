@@ -17,5 +17,5 @@ function handleStartFeed(req, res){
  }
 module.exports = {
     handleStartFeed: handleStartFeed
-    handleAdd: handleAdd
+    ,handleAdd: handleAdd
 }
