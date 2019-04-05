@@ -13,7 +13,11 @@ function handleStartFeed(req, res){
     
 }
  function handleAdd(req,res){
-
+    var title =  req.body.title;
+    var body = req.body.body;
+    var type_def = req.body.type;
+    var items = [title, body, type_def];
+    console.log("controller: " + title + body + type_def);
  }
 module.exports = {
     handleStartFeed: handleStartFeed

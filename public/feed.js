@@ -16,8 +16,12 @@ function addCard(){
   // $(document).ready(function() {
     var title = $("#title").val();
     var body = $("#body").val();
-    var value = $("input[type='radio']:checked").val();
-    alert(title + " " + body + " " + value)
+    var type_def = $("input[type='radio']:checked").val();
+    var items = [title,body,type_def];
+    alert(title + " " + body + " " + type_def)
+    $.post("/addCard",items, function(err, results) {
+       
+    })
    
     $(document.getElementById('start')).append("<div class='card'>" + title.toUpperCase() + " </br>" + body + "</div></br></br>");
   // });
