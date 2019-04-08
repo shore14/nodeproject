@@ -16,10 +16,10 @@ function addCard(){
   // $(document).ready(function() {
     var title = $("#title").val();
     var body = $("#body").val();
-    var type_def = $("[type='radio']").val();
+    var type_def = $("input[type='radio']").val();
     var items = [title,body,type_def];
     alert(title + " " + body + " " + type_def)
-    $.post("/addCard",{title: $("#title").val(), body: $("#body").val(), type_def: $("#type_def").val()}, function(err, results) {
+    $.post("/addCard",{title: $("#title").val(), body: $("#body").val(), type_def: $("input[type='radio]:checked").val()}, function(err, results) {
        
     })
    
