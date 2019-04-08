@@ -19,7 +19,7 @@ function addCard(){
     var type_def = $("[type='radio']").val();
     var items = [title,body,type_def];
     alert(title + " " + body + " " + type_def)
-    $.post("/addCard",{title: $("#title").val(), body: $("#body").val(), type_def: $("#type_def']").val()}, function(err, results) {
+    $.post("/addCard",{title: $("#title").val(), body: $("#body").val(), type_def: $("#type_def").val()}, function(err, results) {
        
     })
    
